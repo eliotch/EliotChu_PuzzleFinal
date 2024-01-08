@@ -1,0 +1,16 @@
+body{
+    font-family: monospace;
+    background-color: #d0f0c0;
+}
+#right{
+    float: right;
+    
+}
+h3{
+    text-align: center;
+}
+button{
+    font-family: monospace;
+    color: aliceblue;
+    background-color: black;
+}
