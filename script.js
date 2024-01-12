@@ -1,16 +1,26 @@
 //referencing my U4L0 code 
-displayImage().then(response => {
-    console.log("good");
-})
-.catch(error => {
-    console.log("bad");
-})
 
-
-async function displayImage(){
-    const response = await fetch('https://source.unsplash.com/collection/190727/600x400');
-    const blob = await response.blob();
+function displayImage(){
+    fetch('https://source.unsplash.com/collection/190727/600x400')
+  .then(response => response.blob())
+  .then(blob => {
     document.getElementById('reference').src= URL.createObjectURL(blob);
-    document.getElementById('puzzle').src= URL.createObjectURL(blob);  
-}  
+    document.getElementById('puzzle').src= URL.createObjectURL(blob); 
+  });
+}
+function switcher(){
+    
+    window.location.href="main.html"
+    document.getElementById("main.html/main").onload = displayImage()
+}
+function checkButton(){
+    if(document.getElementById('puzzle_selection.html/random1').clicked == true){
+        displayCustomImage();
+    }else if(document.getElementById('puzzle_selection.html/random2').clicked == true){
+        displayImage();
+    }
+}
+function displayCustomImage(){
+
+}
 
