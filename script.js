@@ -9,7 +9,6 @@ function displayImage(){
   });
 }
 function switcher(){
-    
     window.location.href="main.html"
     document.getElementById("main.html/main").onload = displayImage()
 }
@@ -24,3 +23,6 @@ function displayCustomImage(){
 
 }
 
+function reset(){
+
+}
